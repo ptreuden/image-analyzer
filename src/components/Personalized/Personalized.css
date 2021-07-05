@@ -30,12 +30,26 @@ h2 {
 }
 
 @media only screen and (max-width: 600px) {
+  .personalized-container {
+    margin: 10px auto;
+    padding: 10px 0;
+  }
+  .personalized-container img {
+    max-height: 140px;
+  }
   h2 {
     font-size: 25px;
   }
 }
 
 @media only screen and (max-width: 450px) {
+  .personalized-container {
+    margin: 5px auto;
+    padding: 10px 0;
+  }
+  .personalized-container img {
+    max-height: 140px;
+  }
   h2 {
     font-size: 20px;
   }
