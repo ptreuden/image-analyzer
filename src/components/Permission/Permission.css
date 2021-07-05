@@ -1,0 +1,125 @@
+.permission-container {
+  height: 100vh;
+  min-height: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.main {
+  width: 100%;
+  height: 80vh;
+}
+
+.permission-logo {
+  min-height: 195px;
+  margin: 45px auto 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.brain-image-container {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 116px;
+  width: 125px;
+  margin: 5px auto;
+}
+
+.outer-brain {
+  width: 116px;
+}
+
+.gears {
+  width: 54px;
+  top: 20px;
+  position: absolute;
+  -webkit-animation: rotate 35s linear infinite;
+  animation: rotate 35s linear infinite;
+}
+
+.permission-logo h2 {
+  margin: 2px;
+  font-size: 23px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.form {
+  margin: 25px auto;
+  border: 1px solid #37434f;
+  border-radius: 5px;
+  padding: 25px 20px 15px;
+  box-shadow: 3px 3px 5px #37434f;
+  background-color: rgba(235, 235, 235, 0.6);
+}
+
+.form label {
+  text-align: left;
+  margin: 5px;
+}
+
+.register-username, .password, .email, .submit-button {
+  background-color: transparent;
+  transition: all 150ms linear;
+}
+
+.register-username:hover, .password:hover, .email:hover, .submit-button:hover {
+  background-color: rgba(42, 60, 79, 0.3);
+}
+
+.link {
+  padding: 3px;
+  font-size: 13px;
+}
+
+#permission-container {
+  overflow-y: scroll;
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .permission-logo {
+    margin: 5px auto 0;
+    min-height: 142px;
+  }
+  .brain-image-container {
+    height: 75px;
+    width: 75px;
+  }
+  .outer-brain {
+    width: 73px;
+  }
+  .gears {
+    width: 34px;
+    top: 14px;
+  }
+  .permission-logo h2 {
+    font-size: 17px;
+  }
+  .form {
+    margin: 5px auto;
+    padding: 20px 15px 15px;
+  }
+}

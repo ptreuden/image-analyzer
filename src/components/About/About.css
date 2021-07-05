@@ -1,0 +1,72 @@
+.about-container {
+  margin: 10px auto 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  color: #1b1c1d;
+  font-weight: 300;
+  bottom: -246px;
+  transition: all 120ms ease-in-out;
+}
+
+/* when the aboutShowing state === true */
+.about-showing {
+  bottom: 0;
+  background-color: rgba(25, 79, 117, 0.8);
+  padding: 100vh 0 0 0;
+}
+
+/* when the aboutShowing state === false */
+.about-hidden {
+  bottom: -246px;
+  background-color: rgba(55,55,55, 0);
+  padding: 0;
+}
+
+.about-content {
+  padding: 0px;
+  max-width: 325px;
+}
+
+.about-tab {
+  padding: 5px 7px 2px 7px;
+  background-color: rgba(201, 207, 214, 0.5);
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  max-width: 35px;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 100ms linear;
+}
+
+.about-tab:hover {
+  background-color: rgba(201, 207, 214, 1);
+}
+
+.about-tab p {
+  margin: 0;
+}
+
+.about-text-container {
+  background-color: rgba(201, 207, 214, 1);
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.about-text {
+  text-align: left;
+}
+
+.about-text a, .about-text-unsplash a {
+  color: #28559a;
+  cursor:pointer;
+}
+
+.about-text-unsplash {
+  text-align: center;
+}

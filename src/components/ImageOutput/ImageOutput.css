@@ -1,0 +1,49 @@
+.imageOutput-container {
+  margin: 15px;
+  padding: 10px 20px;
+  width: 75%;
+  max-width: 450px;
+  min-width: 350px;
+  background: #c9cfd6;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px #303030;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  transition: all 400ms ease;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.imageOutput-container h3 {
+  font-size: 24px;
+  color: #1b1c1d;
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+.imageOutput-image {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.imageOutput-container img {
+  border-radius: 3px;
+}
+
+.showImage {
+  max-height: 675px;
+}
+
+.hideImage {
+  max-height: 200px;
+}

@@ -1,0 +1,33 @@
+.main-container {
+  margin: 5px auto 80px;
+  padding: 25px 15px 10px;
+  width: 80%;
+  max-width: 650px;
+  background: #c9cfd6;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px #303030;
+}
+
+h3 {
+  font-size: 25px;
+  color: #1b1c1d;
+  font-weight: 300;
+  margin: 5px;
+}
+
+ /* div created to leave gap above .main-container on auto-scroll */
+.main-buffer {
+  width: 100%;
+  height: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-container {
+    margin: 5px auto;
+    padding: 20px 10px 10px;
+    width: 95%;
+  }
+  h3 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,8 @@
+.output-container {
+  max-width: 1150px;
+  margin: 0px auto 50px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 10px 25px;
+}
