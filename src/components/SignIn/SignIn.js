@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../Permission/Permission.css';
 
 
-const SignIn = ({ changePermission, changeUser, currentUser, setPreviousImage }) => {
+const SignIn = ({ changePermission, changeUser, currentUser, setPreviousImage, loadingScreen }) => {
 
   const [ email, setEmail ] = useState('');
   const [ password, setPassword ] = useState('');
@@ -24,6 +24,7 @@ const SignIn = ({ changePermission, changeUser, currentUser, setPreviousImage })
       if(data.email) {
         setEmail('');
         setPassword('');
+        loadingScreen(false);
         let { id, username, last_entry, entries } = data;
         changeUser({id: id, username: username, last_entry: last_entry, entries: entries});
         if(last_entry) {
@@ -31,9 +32,13 @@ const SignIn = ({ changePermission, changeUser, currentUser, setPreviousImage })
         }
 
       } else {
-        alert('Login information not correct.  Please try again.');
+        loadingScreen(false);
         setEmail('');
         setPassword('');
+        setTimeout( ()=> {
+          alert('Login information not correct.  Please try again.');
+        }, 100);
+
       }
     })
   }
@@ -49,6 +54,7 @@ const SignIn = ({ changePermission, changeUser, currentUser, setPreviousImage })
       isInvalid.push('password ');
     }
     if(isInvalid.length === 0) {
+      loadingScreen(true);
       sendUserInfo();
     } else {
       alert(`Please try again using a valid ${isInvalid}`)

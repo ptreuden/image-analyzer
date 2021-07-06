@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../Permission/Permission.css';
 
 
-const Register = ({ changePermission, changeUser, currentUser }) => {
+const Register = ({ changePermission, changeUser, currentUser, loadingScreen }) => {
 
   const [ username, setUsername ] = useState('');
   const [ email, setEmail ] = useState('');
@@ -26,16 +26,23 @@ const Register = ({ changePermission, changeUser, currentUser }) => {
       // console.log(data);
 
       if(data === 'Cannot register - heroku') {
-        alert('Email already registered. Please try again. Heroku');
+        loadingScreen(false);
         setUsername('');
         setEmail('');
         setPassword('');
+        setTimeout( ()=> {
+          alert('Email already registered. Please try again.');
+        }, 100);
       } else if (data === 'Invalid register data') {
-        alert('Invalid register information. Please try again.')
+        loadingScreen(false);
         setUsername('');
         setEmail('');
         setPassword('');
+        setTimeout( ()=> {
+          alert('Invalid register information. Please try again.')
+        }, 100);
       } else {
+        loadingScreen(false);
         setUsername('');
         setEmail('');
         setPassword('');
@@ -60,12 +67,14 @@ const Register = ({ changePermission, changeUser, currentUser }) => {
       isInvalid.push('password ');
     }
     if(isInvalid.length === 0) {
+      loadingScreen(true);
       sendUserInfo();
       setUsername('');
       setEmail('');
       setPassword('');
       setPasswordConfirm('');
     } else {
+      loadingScreen(false);
       alert(`It looks like there was a problem with your ${isInvalid}. Please try again`);
       setUsername('');
       setEmail('');

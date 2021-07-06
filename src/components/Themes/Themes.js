@@ -20,7 +20,7 @@ const Themes = ({ showThemes, imageValid, themeNamesValues }) => {
   const themeValue5 = themeNamesValues[4].value.toPrecision(2) * 100;
 
   return(
-    <div className={`themes-container ${(showThemes && imageValid) ? 'visible' : 'hidden'}`}>
+    <div className={`themes-container ${(showThemes && imageValid) ? 'visible' : 'hidden'}`} id='themes-container'>
       <h3>THEMES</h3>
       <div>
         <div className='themes-data'>

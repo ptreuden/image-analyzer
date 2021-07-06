@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Permission from './components/Permission/Permission';
+import Loading from './components/Loading/Loading';
 import Navigation from './components/Navigation/Navigation';
 import Greeting from './components/Greeting/Greeting';
 import Main from './components/Main/Main';
@@ -12,6 +13,7 @@ import 'tachyons';
 const App = () => {
 
   const [ imageValid, setImageValid ] = useState(false);
+  const [ loadingScreen, setLoadingScreen ] = useState(false);
   const [ currentUser, setCurrentUser ] = useState({
     id: 0,
     username: 'Guest',
@@ -118,12 +120,17 @@ const App = () => {
     })
     .then(response => response.json())
     .then(data => {
+        setLoadingScreen(false);
         setThemeNamesValues(data);
         //if window width < ...
         const windowWidth = window.innerWidth;
-        const outputContainer = document.getElementById('output-container');
+        // const outputContainer = document.getElementById('output-container');
+        // if(windowWidth < 1025) {
+        //   outputContainer.scrollIntoView({behavior: 'smooth'});
+        // }
+        const themesContainer = document.getElementById('themes-container');
         if(windowWidth < 1025) {
-          outputContainer.scrollIntoView({behavior: 'smooth'});
+          themesContainer.scrollIntoView({behavior: 'smooth'});
         }
 
         if(currentUser.username !== 'Guest') {
@@ -158,6 +165,7 @@ const App = () => {
     if(imageValid && !showThemes) {
       setShowThemes(true);
       // setCurrentUser({...currentUser, last_entry: urlToRender});
+      setLoadingScreen(true);
       sendPic(urlToRender);
       setCurrentImage(urlToRender);
     }
@@ -172,8 +180,12 @@ const App = () => {
     <div className={`app-container ${imageValid ? 'scrollable' : 'no-scroll'}`}>
       {
         currentUser.username === '' ?
-          <Permission changeUser={changeUser} currentUser={currentUser} setPreviousImage={setPreviousImage}/> :
+        <div>
+          <Loading loadingScreen={loadingScreen} currentUser={currentUser}/>
+          <Permission changeUser={changeUser} currentUser={currentUser} setPreviousImage={setPreviousImage} loadingScreen={setLoadingScreen}/>
+        </div>:
           <div>
+            <Loading loadingScreen={loadingScreen} currentUser={currentUser}/>
             <Navigation changeUser={changeUser} currentUser={currentUser} setPreviousImage={setPreviousImage}/>
             <Greeting user={currentUser} previousImage={previousImage} checkUrl={checkUrl} setUrlToRender={setUrlToRender}/>
             <Main checkUrl={checkUrl} clearField={clearField}  checkToAnalyze={checkToAnalyze} setUrlToRender={setUrlToRender} imageValid={imageValid}/>

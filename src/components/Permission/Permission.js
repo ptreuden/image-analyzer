@@ -5,7 +5,7 @@ import outerBrain from '../../outerBrain.svg';
 import gears from '../../gears.svg';
 
 
-const Permission = ({ changeUser, currentUser, setPreviousImage }) => {
+const Permission = ({ changeUser, currentUser, setPreviousImage, loadingScreen }) => {
 
   const [ permissionScreen, setPermissionScreen ] = useState('signin');
   const changePermissionScreen = (value) => {
@@ -24,9 +24,9 @@ const Permission = ({ changeUser, currentUser, setPreviousImage }) => {
       </div>
       {
         permissionScreen === 'signin' ?
-        <SignIn changePermission={changePermissionScreen} changeUser={changeUser} currentUser={currentUser} setPreviousImage={setPreviousImage}/>
+        <SignIn changePermission={changePermissionScreen} changeUser={changeUser} currentUser={currentUser} setPreviousImage={setPreviousImage} loadingScreen={loadingScreen}/>
         :
-        <Register changePermission={changePermissionScreen} changeUser={changeUser} currentUser={currentUser}/>
+        <Register changePermission={changePermissionScreen} changeUser={changeUser} currentUser={currentUser} loadingScreen={loadingScreen}/>
       }
     </div>
   );

@@ -81,7 +81,7 @@
   overflow-y: scroll;
 }
 
-@keyframes rotate {
+@-webkit-keyframes rotate {
   0% {
     -webkit-transform: rotate(0deg);
   }

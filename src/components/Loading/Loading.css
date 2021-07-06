@@ -1,0 +1,58 @@
+.loading-container {
+  z-index: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(25, 79, 117, 0);
+  transition: background-color 300ms ease;
+}
+
+.loading {
+  height: 100vh;
+  background-color: rgba(25, 79, 117, 0.95);
+}
+
+.not-loading {
+  height: 0px;
+  background-color: rgba(25, 79, 117, 0);
+}
+
+.loading-container img {
+  max-width: 130px;
+}
+
+.loading-container h3 {
+  /* color: rgba(250, 251, 252, 1); */
+  font-size: 22px;
+  margin: 25px 15px;
+  animation: pulse 1500ms infinite;
+  -webkit-animation: pulse 1500ms infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    color: rgba(250, 251, 252, 1);
+  }
+  50% {
+    color: rgba(250, 251, 252, 0.5);
+  }
+  100% {
+    color: rgba(250, 251, 252, 1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    color: rgba(250, 251, 252, 1);
+  }
+  50% {
+    color: rgba(250, 251, 252, 0.5);
+  }
+  100% {
+    color: rgba(250, 251, 252, 1);
+  }
+}
