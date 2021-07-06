@@ -20,22 +20,6 @@
   opacity: 0;
 }
 
-/* optional spinner gif while fetching, may effect theme-bar animation */
-/* .spinner-container {
-  width: 90%;
-  margin: 0px auto;
-  height: 270px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.spinner {
-  max-width: 80px;
-  opacity: 0.9;
-} */
-
 .themes-container h3 {
   font-size: 24px;
   color: #1b1c1d;

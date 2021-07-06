@@ -22,11 +22,10 @@
 }
 
 .loading-container img {
-  max-width: 130px;
+  max-width: 120px;
 }
 
 .loading-container h3 {
-  /* color: rgba(250, 251, 252, 1); */
   font-size: 22px;
   margin: 25px 15px;
   animation: pulse 1500ms infinite;
@@ -54,5 +53,15 @@
   }
   100% {
     color: rgba(250, 251, 252, 1);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .loading-container img {
+    max-width: 90px;
+  }
+  .loading-container h3 {
+    font-size: 18px;
+    margin: 20px 10px;
   }
 }

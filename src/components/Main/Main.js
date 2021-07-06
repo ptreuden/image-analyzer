@@ -6,10 +6,8 @@ import Samples from '../../components/Samples/Samples';
 
 const Main = ({ checkUrl, clearField, showSample, checkToAnalyze, setUrlToRender, imageValid }) => {
   return(
-
     <div>
       <div className='main-buffer' id='main-buffer'>
-        
       </div>
       <div className='main-container' id='main-container'>
         <h3>ANALYZE AN IMAGE</h3>
@@ -17,7 +15,6 @@ const Main = ({ checkUrl, clearField, showSample, checkToAnalyze, setUrlToRender
         <Samples checkUrl={checkUrl} setUrlToRender={setUrlToRender} />
       </div>
     </div>
-
   );
 }
 

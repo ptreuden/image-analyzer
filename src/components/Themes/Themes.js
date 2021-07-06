@@ -1,9 +1,6 @@
 import React from 'react';
 import './Themes.css';
 
-// optional spinner gif for loading
-// import spinnerGif from '../../spinnerGif.gif';
-
 
 const Themes = ({ showThemes, imageValid, themeNamesValues }) => {
 

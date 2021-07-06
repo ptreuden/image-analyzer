@@ -8,7 +8,7 @@ const Input = ({ checkUrl, clearField, checkToAnalyze, setUrlToRender, imageVali
     setUrlToRender(value);
     setTimeout(() => {
         checkUrl(value);
-    }, 150);
+    }, 175);
   }
 
   return(

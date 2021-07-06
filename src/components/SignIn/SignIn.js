@@ -30,7 +30,6 @@ const SignIn = ({ changePermission, changeUser, currentUser, setPreviousImage, l
         if(last_entry) {
           setPreviousImage(last_entry);
         }
-
       } else {
         loadingScreen(false);
         setEmail('');

@@ -124,10 +124,6 @@ const App = () => {
         setThemeNamesValues(data);
         //if window width < ...
         const windowWidth = window.innerWidth;
-        // const outputContainer = document.getElementById('output-container');
-        // if(windowWidth < 1025) {
-        //   outputContainer.scrollIntoView({behavior: 'smooth'});
-        // }
         const themesContainer = document.getElementById('themes-container');
         if(windowWidth < 1025) {
           themesContainer.scrollIntoView({behavior: 'smooth'});
