@@ -4,11 +4,16 @@ import './Input.css';
 
 const Input = ({ checkUrl, clearField, checkToAnalyze, setUrlToRender, imageValid }) => {
 
+  // delayed to make sure urlToRender is properly updated before checkUrl runs
+  const stateChange = (value) => {
+    checkUrl(value);
+  }
+
   const urlHandler = (value) => {
     setUrlToRender(value);
     setTimeout(() => {
-        checkUrl(value);
-    }, 175);
+        stateChange(value);
+    }, 150);
   }
 
   return(
