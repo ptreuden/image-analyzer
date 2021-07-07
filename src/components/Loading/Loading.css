@@ -22,7 +22,7 @@
 }
 
 .loading-container {
-  margin: 0 0 50px;
+  margin: 0 0 60px;
 }
 
 .loading-container img {
@@ -62,7 +62,7 @@
 
 @media only screen and (max-width: 600px) {
   .loading-container img {
-    max-width: 70px;
+    max-width: 75px;
   }
   .loading-container h3 {
     font-size: 18px;

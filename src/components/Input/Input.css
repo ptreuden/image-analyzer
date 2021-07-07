@@ -17,17 +17,17 @@
 .input-button {
   padding: 5px 8px;
   margin: 3px 10px 3px 15px;
-  background-color: #28559a;
-  border: 1px solid #28559a;
+  background-color: #366a9c;
+  border: 1px solid #366a9c;
   border-radius: 3px;
   cursor: pointer;
   color: #fafbfc;
   font-weight: 300;
-  transition: all 120ms linear;
+  transition: all 100ms linear;
 }
 
 .input-button:hover {
-  background-color: #5d8dd4;
+  background-color: #5f8dba;
   animation-play-state: initial;
 }
 
