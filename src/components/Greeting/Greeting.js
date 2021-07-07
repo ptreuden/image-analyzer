@@ -16,7 +16,7 @@ const Greeting = ({ user, previousImage, checkUrl, setUrlToRender }) => {
           user.username === 'Guest' ?
           <h2>Complete your analysis below.</h2>
           :
-          <h2>{`Hello ${user.username}, complete your image analysis below.`}</h2>
+          <h2>{`Hello ${user.username}, complete your analysis below.`}</h2>
         }
       </div>
       :
@@ -29,7 +29,7 @@ const Greeting = ({ user, previousImage, checkUrl, setUrlToRender }) => {
           user.username === 'Guest' ?
           <h2>Complete your analysis below.</h2>
           :
-          <h2>{`Hello ${user.username}, complete your image analysis below.`}</h2>
+          <h2>{`Hello ${user.username}, complete your analysis below.`}</h2>
         }
         </div>
       )
