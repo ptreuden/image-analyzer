@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/image-analyzer/static/css/main.75e45a32.chunk.css",
+    "main.css": "/image-analyzer/static/css/main.11d61626.chunk.css",
     "main.js": "/image-analyzer/static/js/main.9d664013.chunk.js",
     "main.js.map": "/image-analyzer/static/js/main.9d664013.chunk.js.map",
     "runtime-main.js": "/image-analyzer/static/js/runtime-main.7766335c.js",
@@ -12,7 +12,7 @@
     "static/js/3.f77335ab.chunk.js.map": "/image-analyzer/static/js/3.f77335ab.chunk.js.map",
     "index.html": "/image-analyzer/index.html",
     "static/css/2.c1f4f5f4.chunk.css.map": "/image-analyzer/static/css/2.c1f4f5f4.chunk.css.map",
-    "static/css/main.75e45a32.chunk.css.map": "/image-analyzer/static/css/main.75e45a32.chunk.css.map",
+    "static/css/main.11d61626.chunk.css.map": "/image-analyzer/static/css/main.11d61626.chunk.css.map",
     "static/js/2.5c570ade.chunk.js.LICENSE.txt": "/image-analyzer/static/js/2.5c570ade.chunk.js.LICENSE.txt",
     "static/media/brainDataIcon.e27eb040.svg": "/image-analyzer/static/media/brainDataIcon.e27eb040.svg",
     "static/media/gears.45cb39f0.svg": "/image-analyzer/static/media/gears.45cb39f0.svg",
@@ -23,7 +23,7 @@
     "static/js/runtime-main.7766335c.js",
     "static/css/2.c1f4f5f4.chunk.css",
     "static/js/2.5c570ade.chunk.js",
-    "static/css/main.75e45a32.chunk.css",
+    "static/css/main.11d61626.chunk.css",
     "static/js/main.9d664013.chunk.js"
   ]
 }
