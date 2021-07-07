@@ -17,8 +17,8 @@
 .input-button {
   padding: 5px 8px;
   margin: 3px 10px 3px 15px;
-  background-color: #366a9c;
-  border: 1px solid #366a9c;
+  background-color: #24588a;
+  border: 1px solid #24588a;
   border-radius: 3px;
   cursor: pointer;
   color: #fafbfc;
@@ -27,7 +27,7 @@
 }
 
 .input-button:hover {
-  background-color: #5f8dba;
+  background-color: #3e7ab5;
   animation-play-state: initial;
 }
 
