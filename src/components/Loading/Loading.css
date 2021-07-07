@@ -1,4 +1,4 @@
-.loading-container {
+.loading-overlay {
   z-index: 1;
   display: flex;
   flex-flow: row nowrap;
@@ -21,8 +21,12 @@
   background-color: rgba(25, 79, 117, 0);
 }
 
+.loading-container {
+  margin: 0 0 50px;
+}
+
 .loading-container img {
-  max-width: 120px;
+  max-width: 90px;
 }
 
 .loading-container h3 {
@@ -58,7 +62,7 @@
 
 @media only screen and (max-width: 600px) {
   .loading-container img {
-    max-width: 90px;
+    max-width: 70px;
   }
   .loading-container h3 {
     font-size: 18px;
