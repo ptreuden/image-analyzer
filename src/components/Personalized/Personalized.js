@@ -24,12 +24,12 @@ const Personalized = ({ user, previousImage, checkUrl, setUrlToRender }) => {
       {
         user.username === 'Guest' ?
           <div>
-            <h2>Your last analyzed image was:</h2>
+            <h2>Your last image was:</h2>
             <img src={previousImage} alt='pre' onClick={(e) => urlHandler(previousImage)}/>
           </div>
           :
           <div>
-            <h2>Hello <span className='username'>{username}</span>.</h2><h2>Your last analyzed image was:</h2>
+            <h2>Hello <span className='username'>{username}</span>.</h2><h2>Your last image was:</h2>
             <img src={previousImage} alt='pre' onClick={(e) => urlHandler(previousImage)}/>
           </div>
       }
